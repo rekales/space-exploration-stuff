@@ -8,6 +8,3 @@ if settings.startup["matter-fusion-viability"].value then require("prototypes/ma
 if settings.startup["belt-uncoloring"].value then require("prototypes/deep_space_belt_uncoloring.lua") end
 if settings.startup["cancel-pollution-emission"].value then require("prototypes/cancel_pollution_emission.lua") end
 require("prototypes/worm_capsule.lua")
-
--- require("prototypes/ultraheated_furnace.lua")
--- require("prototypes/matter_stream_pipe.lua")
