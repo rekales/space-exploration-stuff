@@ -1,0 +1,22 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 2022-07-19
+  Features:
+    - Added option to instantly absorb pollution for biterless worlds.
+    - Added anti ore regeneration exploit.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 2022-07-12
+  Updates:
+    - Initial release.
+  Features:
+    - Added bioplastic recipe using vitalic epoxy.
+    - Added solid rocket fuel recipe using antimatter.
+    - Added liquid rocket fuel recipe using methane gas.
+    - Added landfill recipe using neutral core fragments.
+    - Added space coal production recipe using biosludge.
+    - Added a way to inefficiently deliver capsules directly.
+    - Added more weapon delivery cannon ammo.
+    - Added a recipe for reverting colored deep space belts to black.
+  Changes:
+    - Increased the outputs of matter fusion recipes.
