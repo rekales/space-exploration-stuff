@@ -64,16 +64,23 @@ data:extend{
     },
     {
         type = "bool-setting",
+        name = "cannonable-nuclear-fuel",
+        setting_type = "startup",
+        default_value = true,
+        order = "j"
+    },
+    {
+        type = "bool-setting",
         name = "anti-ore-regen",
         setting_type = "startup",
         default_value = false,
-        order = "j"
+        order = "k"
     },
     {
         type = "bool-setting",
         name = "cancel-pollution-emission",
         setting_type = "startup",
         default_value = false,
-        order = "k"
+        order = "l"
     },
 }

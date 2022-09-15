@@ -3,3 +3,4 @@ feat02: matter stream pipes
 feat03: ultraheated furnace
 feat04: anti asteroid ammo
 feat05: alt condenser layout
+feat06: cannonable nuclear fuel
