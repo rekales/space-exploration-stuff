@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.2
+Date: 2022-07-19
+  Features:
+    - Added cannonable nuclear fuel
+    - Added vitalic space elevator cable
+  Bugfixes:
+    - Fixed pollution cancelling to avoid messing with spaceship surfaces.
+---------------------------------------------------------------------------------------------------
 Version: 0.1.1
 Date: 2022-07-19
   Features:
