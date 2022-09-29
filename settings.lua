@@ -71,16 +71,23 @@ data:extend{
     },
     {
         type = "bool-setting",
+        name = "vita-elevator-cable",
+        setting_type = "startup",
+        default_value = true,
+        order = "k"
+    },
+    {
+        type = "bool-setting",
         name = "anti-ore-regen",
         setting_type = "startup",
         default_value = false,
-        order = "k"
+        order = "l"
     },
     {
         type = "bool-setting",
         name = "cancel-pollution-emission",
         setting_type = "startup",
         default_value = false,
-        order = "l"
+        order = "m"
     },
 }
