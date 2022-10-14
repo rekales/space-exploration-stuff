@@ -4,7 +4,12 @@ feat03: ultraheated furnace
 feat04: anti asteroid ammo
 feat05: alt condenser layout
 feat06: cannonable nuclear fuel
+feat07: renewable naquitite
 feat08: vita elevator cables
+feat09: pyroflux 500c steam recipe
+feat10: direct heat to electricity generator
+feat11: arcolink to trash dimension
+feat12: space vita farming
 
 new thumbnail
 example pictures for mod page:
