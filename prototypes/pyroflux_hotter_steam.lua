@@ -9,7 +9,7 @@ pyro_steam_recipe.ingredients =
   { type="fluid", name="se-pyroflux", amount=5 }
 }
 
-table.remove(pyro_steam_recipe.results, 4)
+table.remove(pyro_steam_recipe.results, 1)
 table.insert(pyro_steam_recipe.results, {type="fluid", name="steam", amount=150, temperature = 500})
 
 data:extend(
