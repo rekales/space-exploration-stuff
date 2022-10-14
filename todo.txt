@@ -5,3 +5,10 @@ feat04: anti asteroid ammo
 feat05: alt condenser layout
 feat06: cannonable nuclear fuel
 feat08: vita elevator cables
+
+new thumbnail
+example pictures for mod page:
+landfill recycling recipe
+vitalic cable recipe/tech
+reverting colored deep space belts
+maybe a video demonstration for "more delivery cannon ammo"
