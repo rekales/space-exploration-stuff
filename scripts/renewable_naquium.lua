@@ -26,7 +26,10 @@ local function on_rocket_launched(event)
             if zone and zone.type == "asteroid-field" then
                 local inv = event.rocket_silo.get_inventory(defines.inventory.rocket_silo_result)
                 local fsr = event.rocket.surface.map_gen_settings.autoplace_controls["se-naquium-ore"]
-                inv.insert({name="se-naquium-ore", count=math.floor((fsr.frequency+fsr.size+fsr.richness)*10)})
+                inv.insert({name="se-naquium-ore", count=math.floor((fsr.frequency+fsr.size+fsr.richness)
+                *settings.global["naquium-harvest-multiplier"].value
+                *event.rocket_silo.force.mining_drill_productivity_bonus
+                *(math.random()*0.2+0.9))})
             end
         end
     end

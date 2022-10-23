@@ -1,3 +1,4 @@
+--startup settings
 data:extend{
     {
         type = "bool-setting",
@@ -91,3 +92,17 @@ data:extend{
         order = "m"
     },
 }
+
+--runtime global settings
+data:extend{
+    {
+        type = "int-setting",
+        name = "naquium-harvest-multiplier",
+        setting_type = "runtime-global",
+        default_value = 60,
+        minimum_value = 0,
+        maximum_value = 1000,
+        order = "a"
+    },
+}
+
