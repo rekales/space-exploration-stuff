@@ -83,4 +83,11 @@ data:extend{
         default_value = false,
         order = "l"
     },
+    {
+        type = "bool-setting",
+        name = "renewable-naquium",
+        setting_type = "startup",
+        default_value = true,
+        order = "m"
+    },
 }
