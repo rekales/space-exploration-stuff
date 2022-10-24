@@ -90,4 +90,11 @@ data:extend{
         default_value = false,
         order = "m"
     },
+    {
+        type = "bool-setting",
+        name = "pollution-bioscrubbing",
+        setting_type = "startup",
+        default_value = true,
+        order = "n"
+    },
 }

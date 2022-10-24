@@ -10,6 +10,7 @@ feat09: pyroflux 500c steam recipe
 feat10: direct heat to electricity generator
 feat11: arcolink to trash dimension
 feat12: space vita farming
+feat13: pollution scrubbing
 
 new thumbnail
 example pictures for mod page:
