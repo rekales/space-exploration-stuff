@@ -2,6 +2,7 @@ local data_util = require("data_util")
 
 local used_bioscrubber_item = table.deepcopy(data.raw["item"]["se-bioscrubber"])
 used_bioscrubber_item.name = data_util.mod_prefix .. "used-bioscrubber"
+used_bioscrubber_item.icon = "__space-exploration-stuff__/graphics/icons/used-bioscrubber.png"
 
 local pollution_scrubbing_recipe = 
 {
@@ -17,8 +18,23 @@ local pollution_scrubbing_recipe =
     energy_required = 240,
     emissions_multiplier = -20,
     allow_as_intermediate = false,
-    crafting_machine_tint = {primary={1,1,1}, secondary={1,1,1}, tertiary={1,1,1}}
+    crafting_machine_tint = {primary={0.7,0.7,0.7}, secondary={0.5,1,0.5}, tertiary={0.9,1,1}, quaternary={0.75,1,0.75}},
+    icons = 
+    {
+        {
+            icon = data.raw["item"]["se-bioscrubber"].icon,
+            icon_size = data.raw["item"]["se-bioscrubber"].icon_size
+        },
+        {
+            icon = data.raw["fluid"]["steam"].icon,
+            icon_size = data.raw["fluid"]["steam"].icon_size,
+            scale = .25,
+            shift = {-7,-7},
+            tint = {0.8, 0.8, 0.8}
+        },
+    },
 }
+pollution_scrubbing_recipe.localised_name = {"recipe-name."..pollution_scrubbing_recipe.name}
 
 local bioscrubber_cleaning_recipe = 
 {
@@ -28,7 +44,7 @@ local bioscrubber_cleaning_recipe =
     ingredients = 
     {
         {type="item", name=used_bioscrubber_item.name, amount=1},
-        {type="fluid", name="steam", amount=100}
+        {type="fluid", name="water", amount=100}
     },
     results = 
     {
@@ -40,8 +56,22 @@ local bioscrubber_cleaning_recipe =
     energy_required = 10,
     allow_as_intermediate = false,
     main_product = "se-bioscrubber",
-    crafting_machine_tint = {primary={1,1,1}, secondary={1,1,1}, tertiary={1,1,1}}
+    crafting_machine_tint = {primary={0.6,0.4,0.2}, secondary={0.6,0.4,0.4}, tertiary={0.9,0.75,0.6,0.2}, quaternary={0.6,0.4,0.2,0.4}},
+    icons = 
+    {
+        {
+            icon = used_bioscrubber_item.icon,
+            icon_size = used_bioscrubber_item.icon_size
+        },
+        {
+            icon = data.raw["fluid"]["water"].icon,
+            icon_size = data.raw["fluid"]["water"].icon_size,
+            scale = .25,
+            shift = {-7,-7}
+        },
+    },
 }
+bioscrubber_cleaning_recipe.localised_name = {"recipe-name."..bioscrubber_cleaning_recipe.name}
 
 data:extend(
 {
