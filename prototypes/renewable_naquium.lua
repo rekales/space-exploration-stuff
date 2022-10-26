@@ -21,12 +21,12 @@ local naq_clump_processing_recipe =
     ingredients = 
     {
         {type="item", name=naq_clump_item.name, amount=20},
-        {type="fluid", name="se-plasma-stream", amount=50},
+        {type="fluid", name="se-plasma-stream", amount=100},
     },
     results = 
     {
-        {type="item", name="se-naquium-ore", amount=30},
-        {type="item", name="stone", amount=5},
+        {type="item", name="se-naquium-ore", amount=60},
+        {type="item", name="stone", amount=8},
     },
     main_product = "se-naquium-ore",
     energy_required = 20,

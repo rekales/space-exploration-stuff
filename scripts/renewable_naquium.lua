@@ -30,7 +30,7 @@ local function on_rocket_launched(event)
                 *settings.global["naquium-harvest-multiplier"].value
                 *(event.rocket_silo.force.mining_drill_productivity_bonus+1)
                 *(math.random()*0.2+0.9)
-                +20)})
+                +10)})
             end
         end
     end
