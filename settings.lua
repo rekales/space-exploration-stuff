@@ -94,15 +94,18 @@ data:extend{
 }
 
 --runtime global settings
-data:extend{
-    {
-        type = "int-setting",
-        name = "naquium-harvest-multiplier",
-        setting_type = "runtime-global",
-        default_value = 60,
-        minimum_value = 0,
-        maximum_value = 1000,
-        order = "a"
-    },
-}
+-- if settings.startup["renewable-naquium"].value 
+-- then
+    data:extend{
+        {
+            type = "int-setting",
+            name = "naquium-harvest-multiplier",
+            setting_type = "runtime-global",
+            default_value = 20,
+            minimum_value = 1,
+            maximum_value = 1000,
+            order = "a"
+        },
+    }
+-- end
 
