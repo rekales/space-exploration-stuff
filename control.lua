@@ -41,6 +41,7 @@ end
 -- execute scripts
 if settings.startup["anti-ore-regen"].value then require("scripts/anti_ore_regen.lua") end
 if settings.startup["cancel-pollution-emission"].value then require("scripts/cancel_pollution_emission.lua") end
+if settings.startup["renewable-naquium"].value then require("scripts/renewable_naquium.lua") end
 
 -- trigger on_config_changed
 script.on_configuration_changed(function()
@@ -67,5 +68,17 @@ script.on_init(function()
     global.depleted_chunks = {}  --key=position.x, value={position.y=bool}
 end)
 
+local function on_trigger_created_entity(event)
+    local surface = event.entity.surface
+    local position = event.entity.position
 
+    if string.match(event.entity.name, "meteor[-]%d%d")
+    and surface.map_gen_settings.autoplace_controls["se-vitamelange"].frequency > 0
+    then
+        game.print("biter meteor: " .. event.entity.name)
+    end
+    game.print(event.entity.name)
+end
+
+script.on_event(defines.events.on_trigger_created_entity, on_trigger_created_entity)
 
