@@ -1,0 +1,1 @@
+Graphics inside this directory is still licensed to Earendel using his own licensing terms. I just managed to get some explicit permission to use and edit some of his work for the publication this mod. The aforementioned license will be included in this directory.
