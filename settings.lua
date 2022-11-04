@@ -1,3 +1,4 @@
+--startup settings
 data:extend{
     {
         type = "bool-setting",
@@ -92,9 +93,40 @@ data:extend{
     },
     {
         type = "bool-setting",
-        name = "pollution-bioscrubbing",
+        name = "pyroflux-hotter-steam",
         setting_type = "startup",
         default_value = true,
         order = "n"
     },
+    {
+        type = "bool-setting",
+        name = "renewable-naquium",
+        setting_type = "startup",
+        default_value = true,
+        order = "o"
+    },
+    {
+        type = "bool-setting",
+        name = "pollution-bioscrubbing",
+        setting_type = "startup",
+        default_value = true,
+        order = "p"
+    },
 }
+
+--runtime global settings
+-- if settings.startup["renewable-naquium"].value 
+-- then
+    data:extend{
+        {
+            type = "int-setting",
+            name = "naquium-harvest-multiplier",
+            setting_type = "runtime-global",
+            default_value = 10,
+            minimum_value = 1,
+            maximum_value = 1000,
+            order = "a"
+        },
+    }
+-- end
+

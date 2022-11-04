@@ -7,4 +7,5 @@ if settings.startup["antimatter-rocket-fuel"].value then require("prototypes/ant
 if settings.startup["matter-fusion-viability"].value then require("prototypes/matter_fusion_viability.lua") end
 if settings.startup["belt-uncoloring"].value then require("prototypes/deep_space_belt_uncoloring.lua") end
 if settings.startup["cancel-pollution-emission"].value then require("prototypes/cancel_pollution_emission.lua") end
+if settings.startup["pyroflux-hotter-steam"].value then require("prototypes/pyroflux_hotter_steam.lua") end
 if settings.startup["pollution-bioscrubbing"].value then require("prototypes/pollution_bioscrubbing.lua") end

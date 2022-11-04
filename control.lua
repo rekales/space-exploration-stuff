@@ -41,6 +41,7 @@ end
 -- execute scripts
 if settings.startup["anti-ore-regen"].value then require("scripts/anti_ore_regen.lua") end
 if settings.startup["cancel-pollution-emission"].value then require("scripts/cancel_pollution_emission.lua") end
+if settings.startup["renewable-naquium"].value then require("scripts/renewable_naquium.lua") end
 
 -- trigger on_config_changed
 script.on_configuration_changed(function()
@@ -66,6 +67,3 @@ script.on_init(function()
     global.tick_schedule = {}   --value={ticks=number, handler=function}
     global.depleted_chunks = {}  --key=position.x, value={position.y=bool}
 end)
-
-
-
