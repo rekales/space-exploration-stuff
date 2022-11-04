@@ -2,7 +2,7 @@ local data_util = require("data_util")
 
 local used_bioscrubber_item = table.deepcopy(data.raw["item"]["se-bioscrubber"])
 used_bioscrubber_item.name = data_util.mod_prefix .. "used-bioscrubber"
-used_bioscrubber_item.icon = "__space-exploration-stuff__/graphics/icons/used-bioscrubber.png"
+used_bioscrubber_item.icon = "__space-exploration-stuff__/graphics/licensed/icons/used-bioscrubber.png"
 
 local pollution_scrubbing_recipe = 
 {
