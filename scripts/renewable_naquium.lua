@@ -36,5 +36,8 @@ local function on_rocket_launched(event)
     end
 end
 
+if settings.startup["renewable-naquium"].value 
+then 
 Event.add_listener(defines.events.on_rocket_launch_ordered, on_rocket_launch_ordered)
 Event.add_listener(defines.events.on_rocket_launched, on_rocket_launched)
+end

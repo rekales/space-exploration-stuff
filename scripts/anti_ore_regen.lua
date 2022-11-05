@@ -93,5 +93,8 @@ local function on_chunk_generated(event)
     end
 end
 
-Event.add_listener(defines.events.on_resource_depleted, on_resource_depleted)
-Event.add_listener(defines.events.on_chunk_generated, on_chunk_generated)
+if settings.startup["anti-ore-regen"].value 
+then 
+    Event.add_listener(defines.events.on_resource_depleted, on_resource_depleted)
+    Event.add_listener(defines.events.on_chunk_generated, on_chunk_generated)
+end

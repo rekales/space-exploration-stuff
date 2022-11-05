@@ -39,26 +39,29 @@ local function on_gui_click(event)
     end
 end
 
-Event.add_config_changed_listener(function()
-    for _,surface in pairs(game.surfaces)
-    do
-        if surface.map_gen_settings.autoplace_controls
-        and surface.map_gen_settings.autoplace_controls["enemy-base"]
-        and surface.map_gen_settings.autoplace_controls["enemy-base"].size == -1
-        then
-            local chunk = surface.get_random_chunk()
-            if not surface.find_entity(data_util.mod_prefix .. "pollution-absorber", {chunk.x*32+.5, chunk.y*32+.5})
-            and not (chunk.x == 0 and chunk.y == 0 and not surface.is_chunk_generated({0,0}))
-            and surface.is_chunk_generated(chunk)
+if settings.startup["cancel-pollution-emission"].value 
+then
+    Event.add_config_changed_listener(function()
+        for _,surface in pairs(game.surfaces)
+        do
+            if surface.map_gen_settings.autoplace_controls
+            and surface.map_gen_settings.autoplace_controls["enemy-base"]
+            and surface.map_gen_settings.autoplace_controls["enemy-base"].size == -1
             then
-                for chunk in surface.get_chunks()
-                do
-                    surface.create_entity{name=data_util.mod_prefix .. "pollution-absorber", position={x=chunk.x*32, y=chunk.y*32}}
+                local chunk = surface.get_random_chunk()
+                if not surface.find_entity(data_util.mod_prefix .. "pollution-absorber", {chunk.x*32+.5, chunk.y*32+.5})
+                and not (chunk.x == 0 and chunk.y == 0 and not surface.is_chunk_generated({0,0}))
+                and surface.is_chunk_generated(chunk)
+                then
+                    for chunk in surface.get_chunks()
+                    do
+                        surface.create_entity{name=data_util.mod_prefix .. "pollution-absorber", position={x=chunk.x*32, y=chunk.y*32}}
+                    end
                 end
             end
         end
-    end
-end)
-
-Event.add_listener(defines.events.on_chunk_generated, on_chunk_generated)
-Event.add_listener(defines.events.on_gui_click, on_gui_click)
+    end)
+    
+    Event.add_listener(defines.events.on_chunk_generated, on_chunk_generated)
+    Event.add_listener(defines.events.on_gui_click, on_gui_click)
+end

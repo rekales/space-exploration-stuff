@@ -39,9 +39,9 @@ function Event.add_config_changed_listener(handler)
 end
 
 -- execute scripts
-if settings.startup["anti-ore-regen"].value then require("scripts/anti_ore_regen.lua") end
-if settings.startup["cancel-pollution-emission"].value then require("scripts/cancel_pollution_emission.lua") end
-if settings.startup["renewable-naquium"].value then require("scripts/renewable_naquium.lua") end
+require("scripts/anti_ore_regen.lua")
+require("scripts/cancel_pollution_emission.lua")
+require("scripts/renewable_naquium.lua")
 
 -- trigger on_config_changed
 script.on_configuration_changed(function()
