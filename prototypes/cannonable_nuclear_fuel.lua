@@ -1,11 +1,13 @@
-local data_util = require("data_util")
+if settings.startup["cannonable-nuclear-fuel"].value 
+then 
+  local data_util = require("data_util")
 
--- yeah that's right, I stole this code because I don't know the interface for adding a cannonable item
+  -- yeah that's right, I stole this code because I don't know the interface for adding a cannonable item
 
-  local fuel_item = data.raw["item"]["uranium-fuel-cell"]
-  local used_fuel_item = data.raw["item"]["used-up-uranium-fuel-cell"]
+    local fuel_item = data.raw["item"]["uranium-fuel-cell"]
+    local used_fuel_item = data.raw["item"]["used-up-uranium-fuel-cell"]
 
-data:extend({
+  data:extend({
     {
         type = "item",
         name = "se-delivery-cannon-package-"..fuel_item.name,
@@ -76,3 +78,4 @@ data:extend({
         allow_decomposition = false
     },
   })
+end
