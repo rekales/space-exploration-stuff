@@ -112,6 +112,13 @@ data:extend{
         default_value = true,
         order = "p"
     },
+    {
+        type = "bool-setting",
+        name = "medpack-recoloring",
+        setting_type = "startup",
+        default_value = true,
+        order = "q"
+    },
 }
 
 --runtime global settings
