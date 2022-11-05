@@ -121,6 +121,11 @@ data:extend{
     },
 }
 
+if mods["se-recycling-extras"]
+then
+    data.raw["bool-setting"]["belt-uncoloring"].default_value = false
+end
+
 --runtime global settings
 -- if settings.startup["renewable-naquium"].value 
 -- then
