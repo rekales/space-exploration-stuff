@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+Date: 2022-11-03
+  Features:
+    - Added pollution bioscrubbing recipe
+  Changes:
+    - Recolored medpacks to green
+    - Refactored settings names
+  Bugfixes:
+    - Removed selective requiring that could lead to desyncs
+---------------------------------------------------------------------------------------------------
 Version: 0.1.4
 Date: 2022-11-03
   Bugfixes:
