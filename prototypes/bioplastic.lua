@@ -1,6 +1,7 @@
-if settings.startup["bioplastic"].value
+local data_util = require("data_util")
+
+if settings.startup[data_util.mod_prefix.."bioplastic"].value
 then
-  local data_util = require("data_util")
   -- mep = methane_epoxy_plastic
   local mep_recipe = table.deepcopy(data.raw["recipe"]["plastic-bar"])
 

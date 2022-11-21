@@ -1,4 +1,6 @@
-if settings.startup["matter-fusion-viability"].value 
+local data_util = require("data_util")
+
+if settings.startup[data_util.mod_prefix.."matter-fusion-viability"].value 
 then 
   ---@param recipe_prototype prototype type="recipe"
   ---@param result_name string

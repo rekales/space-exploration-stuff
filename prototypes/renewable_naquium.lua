@@ -1,7 +1,7 @@
-if settings.startup["renewable-naquium"].value 
-then 
-    local data_util = require("data_util")
+local data_util = require("data_util")
 
+if settings.startup[data_util.mod_prefix.."renewable-naquium"].value 
+then 
     local neutral_fragment = data.raw["item"]["se-core-fragment-omni"]
     local naquium_ore = data.raw["item"]["se-naquium-ore"]
     local naq_clump_item = table.deepcopy(data.raw["item"]["se-naquium-ore"])

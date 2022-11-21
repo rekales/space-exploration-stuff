@@ -1,7 +1,7 @@
-if settings.startup["cancel-pollution-emission"].value 
-then 
-    local data_util = require("data_util")
+local data_util = require("data_util")
 
+if settings.startup[data_util.mod_prefix.."cancel-pollution-emission"].value 
+then 
     local pollution_absorber_tile = table.deepcopy(data.raw["tile"]["concrete"])
     pollution_absorber_tile.name = data_util.mod_prefix .. "pollution-absorber"
     pollution_absorber_tile.pollution_absorption_per_second = 0.000008

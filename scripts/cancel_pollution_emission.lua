@@ -39,7 +39,7 @@ local function on_gui_click(event)
     end
 end
 
-if settings.startup["cancel-pollution-emission"].value 
+if settings.startup[data_util.mod_prefix.."cancel-pollution-emission"].value 
 then
     Event.add_config_changed_listener(function()
         for _,surface in pairs(game.surfaces)

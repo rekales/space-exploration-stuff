@@ -1,7 +1,7 @@
-if settings.startup["more-wdc-ammo"].value 
-then 
-    local data_util = require("data_util")
+local data_util = require("data_util")
 
+if settings.startup[data_util.mod_prefix.."more-wdc-ammo"].value 
+then 
     local wdc_prefix = "se-delivery-cannon-weapon-pack-"
 
     ---@param payload prototype type="ammo" or type="capsule"

@@ -1,7 +1,7 @@
-if settings.startup["methane-rocket-fuel"].value 
-then 
-  local data_util = require("data_util")
+local data_util = require("data_util")
 
+if settings.startup[data_util.mod_prefix.."methane-rocket-fuel"].value 
+then 
   --mrf = methane_rocket_fuel
   local mrf_recipe = table.deepcopy(data.raw["recipe"]["rocket-fuel"])
   local lrf_fluid = data.raw["fluid"]["se-liquid-rocket-fuel"]

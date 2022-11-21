@@ -1,7 +1,7 @@
-if settings.startup["simplified-delivery-capsule"].value 
-then 
-    local data_util = require("data_util")
+local data_util = require("data_util")
 
+if settings.startup[data_util.mod_prefix.."simplified-delivery-capsule"].value 
+then 
     data:extend(
     {
         {

@@ -1,7 +1,7 @@
-if settings.startup["medpack-recoloring"].value 
-then 
-    local data_util = require("data_util")
+local data_util = require("data_util")
 
+if settings.startup[data_util.mod_prefix.."medpack-recoloring"].value 
+then 
     data.raw["capsule"]["se-medpack"].icon = "__space-exploration-stuff__/graphics/licensed/icons/medpack-1.png"
     data.raw["capsule"]["se-medpack-2"].icon = "__space-exploration-stuff__/graphics/licensed/icons/medpack-2.png"
     data.raw["capsule"]["se-medpack-3"].icon = "__space-exploration-stuff__/graphics/licensed/icons/medpack-3.png"

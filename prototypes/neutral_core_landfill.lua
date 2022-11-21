@@ -1,7 +1,7 @@
-if settings.startup["neutral-core-landfill"].value 
-then 
-  local data_util = require("data_util")
+local data_util = require("data_util")
 
+if settings.startup[data_util.mod_prefix.."neutral-core-landfill"].value 
+then 
   local neutral_core_landfill = table.deepcopy(data.raw["recipe"]["landfill"])
   local landfill_item = data.raw["item"]["landfill"]
   local neutral_core_item = data.raw["item"]["se-core-fragment-omni"]

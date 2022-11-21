@@ -1,7 +1,7 @@
-if settings.startup["cannonable-nuclear-fuel"].value 
-then 
-  local data_util = require("data_util")
+local data_util = require("data_util")
 
+if settings.startup[data_util.mod_prefix.."cannonable-nuclear-fuel"].value 
+then 
   -- yeah that's right, I stole this code because I don't know the interface for adding a cannonable item
 
     local fuel_item = data.raw["item"]["uranium-fuel-cell"]

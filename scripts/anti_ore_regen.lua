@@ -1,3 +1,5 @@
+local data_util = require("data_util")
+
 local function get_chunk_position(position)  --hey dipshit, don't forget about this
     return {x=math.floor(position.x/32), y=math.floor(position.y/32)}
 end
@@ -93,7 +95,7 @@ local function on_chunk_generated(event)
     end
 end
 
-if settings.startup["anti-ore-regen"].value 
+if settings.startup[data_util.mod_prefix.."anti-ore-regen"].value 
 then 
     Event.add_listener(defines.events.on_resource_depleted, on_resource_depleted)
     Event.add_listener(defines.events.on_chunk_generated, on_chunk_generated)

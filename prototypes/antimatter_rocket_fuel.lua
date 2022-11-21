@@ -1,7 +1,7 @@
-if settings.startup["antimatter-rocket-fuel"].value 
-then 
-  local data_util = require("data_util")
+local data_util = require("data_util")
 
+if settings.startup[data_util.mod_prefix.."antimatter-rocket-fuel"].value 
+then 
   --arf = antimatter_rocket_fuel
   local arf_recipe = table.deepcopy(data.raw["recipe"]["rocket-fuel"])
   local rf_item = data.raw["item"]["rocket-fuel"]

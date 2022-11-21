@@ -1,7 +1,7 @@
-if settings.startup["belt-uncoloring"].value 
-then 
-    local data_util = require("data_util")
+local data_util = require("data_util")
 
+if settings.startup[data_util.mod_prefix.."belt-uncoloring"].value 
+then 
     local belt_colors = 
     {   
         "blue",

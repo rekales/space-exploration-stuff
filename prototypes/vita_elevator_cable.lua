@@ -1,7 +1,7 @@
-if settings.startup["vita-elevator-cable"].value 
-then 
-  local data_util = require("data_util")
+local data_util = require("data_util")
 
+if settings.startup[data_util.mod_prefix.."vita-elevator-cable"].value 
+then 
   local vita_cable_recipe = table.deepcopy(data.raw["recipe"]["se-space-elevator-cable"])
   local classic_cable_recipe = data.raw["recipe"]["se-space-elevator-cable"]
   local classic_cable_item = data.raw["item"]["se-space-elevator-cable"]

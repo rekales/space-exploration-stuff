@@ -1,7 +1,7 @@
-if settings.startup["biosludge-coal"].value 
+local data_util = require("data_util")
+  
+if settings.startup[data_util.mod_prefix.."biosludge-coal"].value 
 then 
-  local data_util = require("data_util")
-
   local biosludge_coal = table.deepcopy(data.raw["recipe"]["se-thermodynamics-coal"])
   local coal_item = data.raw["item"]["coal"]
   local biosludge_fluid = data.raw["fluid"]["se-bio-sludge"]
