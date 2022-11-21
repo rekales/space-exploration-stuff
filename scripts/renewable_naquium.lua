@@ -27,7 +27,7 @@ local function on_rocket_launched(event)
                 local inv = event.rocket_silo.get_inventory(defines.inventory.rocket_silo_result)
                 local fsr = event.rocket.surface.map_gen_settings.autoplace_controls["se-naquium-ore"]
                 inv.insert({name="ses-naquium-clump", count=math.floor((fsr.frequency+fsr.size+fsr.richness)
-                *settings.global["naquium-harvest-multiplier"].value
+                *settings.global[data_util.mod_prefix.."naquium-harvest-multiplier"].value
                 *(event.rocket_silo.force.mining_drill_productivity_bonus+1)
                 *(math.random()*0.2+0.9)
                 +10)})
