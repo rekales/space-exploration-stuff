@@ -12,6 +12,7 @@ feat11: arcolink to trash dimension
 feat12: space vita farming
 feat14: recolor medpacks
 feat13: pollution scrubbing
+feat15: core miner speed setting
 
 new thumbnail
 example pictures for mod page:

@@ -121,7 +121,18 @@ data:extend{
         default_value = true,
         order = "q"
     },
+    {
+        type = "double-setting",
+        name = data_util.mod_prefix .. "core-miner-speed-multiplier",
+        setting_type = "startup",
+        default_value = 1,
+        minimum_value = 0.1,
+        maximum_value = 10,
+        order = "r"
+    },
 }
+
+
 
 if mods["se-recycling-extras"]
 then
