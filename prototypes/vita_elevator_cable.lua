@@ -45,7 +45,7 @@ then
   vita_cable_tech.prerequisites = {epoxy_tech.name}
   vita_cable_tech.unit.count = epoxy_tech.unit.count * 2
   vita_cable_tech.unit.time = epoxy_tech.unit.time
-  vita_cable_tech.unit.ingredients = data.raw["technology"]["se-space-elevator"].unit.ingredients
+  vita_cable_tech.unit.ingredients = table.deepcopy(data.raw["technology"]["se-space-elevator"].unit.ingredients)
   table.insert(vita_cable_tech.unit.ingredients, {name="se-biological-science-pack-3", amount=1})
 
 

@@ -43,7 +43,7 @@ then
   arf_tech.prerequisites = {antimatter_production_tech.name}
   arf_tech.unit.count = antimatter_production_tech.unit.count / 4
   arf_tech.unit.time = antimatter_production_tech.unit.time
-  arf_tech.unit.ingredients = antimatter_production_tech.unit.ingredients
+  arf_tech.unit.ingredients = table.deepcopy(antimatter_production_tech.unit.ingredients)
 
   arf_tech.icons = 
   {
