@@ -32,7 +32,7 @@ then
         },
         main_product = "se-naquium-ore",
         energy_required = 20,
-        hidden = true
+        enabled = false
     }
 
     local naq_harvester_item = table.deepcopy(data.raw["item"]["se-void-probe"])
