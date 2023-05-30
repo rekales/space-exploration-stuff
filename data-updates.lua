@@ -1,0 +1,1 @@
+require("prototypes/space_train_stop.lua")

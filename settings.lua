@@ -122,13 +122,20 @@ data:extend{
         order = "q"
     },
     {
+        type = "bool-setting",
+        name = data_util.mod_prefix .. "empty-space-train-stop",
+        setting_type = "startup",
+        default_value = true,
+        order = "r"
+    },
+    {
         type = "double-setting",
         name = data_util.mod_prefix .. "core-miner-speed-multiplier",
         setting_type = "startup",
         default_value = 1,
         minimum_value = 0.1,
         maximum_value = 10,
-        order = "r"
+        order = "s"
     },
 }
 
