@@ -10,7 +10,14 @@ do
         goto continue
     end
 
-    p.collision_mask = {"item-layer", "floor-layer", "water-tile", "player-layer",}
+    p.collision_mask = {"item-layer", "floor-layer", "water-tile", "player-layer"}
     
     ::continue::
+end
+
+if mods["train-pubsub"]
+then
+    data.raw["constant-combinator"]["train-config"].collision_mask = {"item-layer", "floor-layer", "water-tile", "player-layer"}
+    data.raw["constant-combinator"]["train-counter"].collision_mask = {"item-layer", "floor-layer", "water-tile", "player-layer"}
+    data.raw["lamp"]["train-publisher"].collision_mask = {"item-layer", "floor-layer", "water-tile", "player-layer"}
 end
