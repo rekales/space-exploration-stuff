@@ -51,4 +51,26 @@ then
             }
         )
     end
+
+    if mods["aai-loaders"] then
+        for _,color in pairs(belt_colors)
+        do
+            local loader_recipe = table.deepcopy(data.raw["recipe"]["aai-se-deep-space-blue-loader"])
+
+            loader_recipe.name = data_util.mod_prefix .. "loader-" .. color .. "-to-black"
+            loader_recipe.category = "hard-recycling"
+            loader_recipe.order = "z-f-a-" .. color
+            loader_recipe.ingredients = {{name="aai-se-deep-space-"..color.."-loader", amount=1}}
+            loader_recipe.results = {{name="aai-se-deep-space-black-loader", amount=1}}
+            loader_recipe.icons = data_util.make_transition_icon(data.raw["item"]["aai-se-deep-space-"..color.."-loader"], data.raw["item"]["aai-se-deep-space-black-loader"])
+            table.insert(data.raw["technology"]["aai-se-deep-space-loader"].effects, {type="unlock-recipe", recipe=loader_recipe.name})
+
+            data:extend(
+                {
+                    loader_recipe,
+                }
+            )
+        end
+    end
+
 end
