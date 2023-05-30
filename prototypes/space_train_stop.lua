@@ -1,4 +1,7 @@
+local data_util = require("data_util")
 
+if not settings.startup[data_util.mod_prefix.."empty-space-train-stop"].value
+then return end
 
 for _,p in pairs(data.raw["train-stop"])
 do
