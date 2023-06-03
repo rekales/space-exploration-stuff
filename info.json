@@ -1,9 +1,9 @@
 {
     "name": "space-exploration-stuff",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "title": "Space Exploration Stuff",
     "author": "Krei_",
     "factorio_version": "1.1",
-    "dependencies": ["base >= 1.1", "space-exploration >= 0.6.89"],
+    "dependencies": ["base >= 1.1", "space-exploration"],
     "description": "Space Exploration but more (and some other changes)"
   }
