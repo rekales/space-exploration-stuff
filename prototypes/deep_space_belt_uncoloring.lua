@@ -52,7 +52,7 @@ then
         )
     end
 
-    if mods["aai-loaders"] then
+    if mods["aai-loaders"] and not settings.startup["aai-loaders-mode"] == "graphics-only" then
         for _,color in pairs(belt_colors)
         do
             local loader_recipe = table.deepcopy(data.raw["recipe"]["aai-se-deep-space-blue-loader"])
