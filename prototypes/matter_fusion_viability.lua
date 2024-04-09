@@ -7,15 +7,28 @@ then
   ---@param new_amount number 
   ---@return boolean
   local function edit_recipe_result_value(recipe_prototype, result_name, new_amount)
-    for _,result in pairs(recipe_prototype.results)
-    do
-      if result.name == result_name
-      then
-        result.amount = new_amount
-        result.probability = 1
-        return true
+    if recipe_prototype.results
+    then
+      for _,result in pairs(recipe_prototype.results)
+      do
+        if result.name == result_name
+        then
+          result.amount = new_amount
+          result.probability = 1
+          return true
+        end
       end
-    end
+    else
+      for _,result in pairs(recipe_prototype.normal.results)
+      do
+        if result.name == result_name
+        then
+          result.amount = new_amount
+          result.probability = 1
+          return true
+        end
+      end
+    end  
     return false
   end
 
